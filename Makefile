@@ -19,11 +19,13 @@ RANLIB=ranlib
 all: libpnm.a
 
 libpnm.a: pnm.o
+	@echo "[+] Archiving libpnm.a"
 	$(AR) rsv $@ $?
 	$(RANLIB) $@
 
-.c .o:
-	$(CC) $(CFLAGS) -o $@ $<
+%.o: %.c
+	@echo "[+] Building objects file for libpnm"
+	$(CC) $(CFLAGS) -c $<
 
 
 clean:
