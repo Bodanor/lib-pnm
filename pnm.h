@@ -73,8 +73,6 @@ int load_pnm(PNM **image, char* filename);
  */
 int write_pnm(PNM *image, char* filename);
 
-long encrypt_pnm_random(PNM *image, long seed);
-void decrypt_pnm_random(PNM *image, long seed);
 PNM *createPNM(char *filetype);
 int verify_forbidden_input_char(char *string);
 
